@@ -4,9 +4,9 @@ from typing import Optional
 
 
 class Status(IntEnum):
-    success: auto()
-    fail: auto()
-    error: auto()
+    success = auto()
+    fail = auto()
+    error = auto()
 
 
 @dataclass(frozen=True)
