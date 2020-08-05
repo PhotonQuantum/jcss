@@ -34,7 +34,7 @@ async def predict(request: Request):
             resp = Result(Status.fail, data={"image": "Invalid image format."})
             return JSONResponse(resp.dict(), status_code=HTTP_400_BAD_REQUEST)
 
-        resp = Result(Status.success, data={"prediction": result, "elapsed_time": time_consumed})
+        resp = Result(Status.success, data={"prediction": result, "elapsed_time": int(time_consumed*1000)})
         return JSONResponse(resp.dict())
     except Exception as e:
         resp = Result(Status.error, message=str(e), data={"traceback": traceback.format_exc()})
