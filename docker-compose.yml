@@ -1,0 +1,9 @@
+version: "3"
+services:
+  jcss:
+    image: photonquantum/jcss
+    ports:
+      - "8000:8000"
+    environment:
+      - WEB_CONCURRENCY=2
+    restart: always

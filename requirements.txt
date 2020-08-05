@@ -1,0 +1,6 @@
+numpy
+pillow
+onnxruntime
+starlette
+python-multipart
+uvicorn
